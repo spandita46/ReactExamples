@@ -1,0 +1,43 @@
+#---------------------------------------#
+# Project Ignores                       #
+#---------------------------------------#
+
+# output
+**/.temp/**
+**/.tmp/**
+**/build/**
+**/dist/**
+
+# dependencies
+**/node_modules/**
+**.package.swp**
+
+
+#---------------------------------------#
+# IDEs & Editors Ignores                #
+#---------------------------------------#
+
+# Sublime Text
+/*.sublime*
+.sublime-gulp.cache
+
+# JetBrains IDEs
+/.idea
+
+# VS Code
+.code-workspace
+
+
+#---------------------------------------#
+# Windows Ignores                       #
+#---------------------------------------#
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
