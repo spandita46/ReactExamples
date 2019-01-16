@@ -1,7 +1,7 @@
 {
   "name": "blog-posts",
   "version": "1.0.0",
-  "description": "Demonstartes how to make asynch calls using reducers in react-redux application",
+  "description": "Demonstrates use of async api with react-redux projects",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
