@@ -1,6 +1,16 @@
 import JSONPH from "../helpers/JSONPlaceHolder";
 import lodash from "lodash";
 
+export const fetchPostsAndUsers = () => async (dispatch, getState) => {
+  await dispatch(fetchPosts());
+  const uniqueUserIdsInPosts = lodash.uniq(
+    lodash.map(getState().posts, "userId")
+  );
+  uniqueUserIdsInPosts.forEach(userId => {
+    dispatch(fetchUser(userId));
+  });
+};
+
 export const fetchPosts = () => async dispatch => {
   const jsonRes = await JSONPH.get("/posts");
   dispatch({
@@ -9,11 +19,10 @@ export const fetchPosts = () => async dispatch => {
   });
 };
 
-export const fetchUser = userId => dispatch => _fetchUser(userId, dispatch);
-const _fetchUser = lodash.memoize(async (userId, dispatch) => {
+export const fetchUser = userId => async dispatch => {
   const jsonRes = await JSONPH.get(`/users/${userId}`);
   dispatch({
     type: "FETCH_USER",
     payload: jsonRes.data
   });
-});
+};
