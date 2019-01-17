@@ -1,12 +1,8 @@
 import { combineReducers } from "redux";
-
-const seedReducer = (oldSeedData = null, action) => {
-  if (action.type === "SEED_ACTION") {
-    return action.payload;
-  }
-  return oldSeedData;
-};
+import PostReducer from "./postReducer";
+import UserReducer from "./userReducer";
 
 export default combineReducers({
-  selectedSong: seedReducer
+  posts: PostReducer,
+  users: UserReducer
 });
