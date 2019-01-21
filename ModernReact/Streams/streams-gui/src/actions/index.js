@@ -1,6 +1,13 @@
-export const selectSong = data => {
+import { SIGN_IN, SIGN_OUT } from "./actionTypes";
+
+export const signIn = () => {
   return {
-    type: "SEED_ACTION",
-    payload: data
+    type: SIGN_IN
+  };
+};
+
+export const signOut = () => {
+  return {
+    type: SIGN_OUT
   };
 };
