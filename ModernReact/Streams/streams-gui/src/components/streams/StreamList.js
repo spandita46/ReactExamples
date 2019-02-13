@@ -13,7 +13,9 @@ class StreamList extends React.Component {
       return (
         <div className="right floated content">
           <button className="ui button negative">Delete</button>
-          <button className="ui button primary">Edit</button>
+          <Link to={`/streams/edit/${stream.id}`} className="ui button primary">
+            Edit
+          </Link>
         </div>
       );
     }

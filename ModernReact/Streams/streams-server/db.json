@@ -26,6 +26,12 @@
       "description": "Fun To Create Your Own history",
       "userId": "108414201734698698168",
       "id": 5
+    },
+    {
+      "title": "New Stream",
+      "description": "After refactoring, this is my first stream",
+      "userId": "108414201734698698168",
+      "id": 6
     }
   ]
 }

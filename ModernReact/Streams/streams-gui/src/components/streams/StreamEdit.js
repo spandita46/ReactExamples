@@ -1,7 +1,25 @@
 import React from "react";
+import { connect } from "react-redux";
+import { fetchStream } from "../../actions/index";
 
-const StreamEdit = () => {
-  return <div>StreamEdit</div>;
+class StreamEdit extends React.Component {
+  componentDidMount() {
+    const idOfStream = this.props.match.params.id;
+    this.props.fetchStream(idOfStream);
+  }
+
+  render() {
+    console.log(this.props);
+    return <div>StreamEdit</div>;
+  }
+}
+
+const mapStateToProps = (state, ownProps) => {
+  const idOfStream = ownProps.match.params.id;
+  return { stream: state.streams[idOfStream] };
 };
 
-export default StreamEdit;
+export default connect(
+  mapStateToProps,
+  { fetchStream }
+)(StreamEdit);
