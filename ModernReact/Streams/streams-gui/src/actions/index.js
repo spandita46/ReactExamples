@@ -53,11 +53,13 @@ export const fetchStream = streamId => async dispatch => {
 };
 
 export const editStream = (streamId, formData) => async dispatch => {
-  const response = await Streams.put(`/streams/${streamId}`, formData);
+  const response = await Streams.patch(`/streams/${streamId}`, formData);
   dispatch({
     type: EDIT_STREAM,
     payload: response.data
   });
+  // Programmatic Navigation
+  History.push("/");
 };
 
 export const deleteStream = streamId => async dispatch => {
