@@ -1,0 +1,14 @@
+{
+  "name": "rtmp_server",
+  "version": "1.0.0",
+  "description": "RTMP Server For Streams Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Sandeep K. Pandita",
+  "license": "ISC",
+  "dependencies": {
+    "node-media-server": "^1.4.12"
+  }
+}
