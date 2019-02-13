@@ -1,0 +1,31 @@
+{
+  "streams": [
+    {
+      "title": "Dog Loving The Ball",
+      "description": "This is a nice stream of a nice dog",
+      "id": 1
+    },
+    {
+      "title": "Cat Fight",
+      "description": "The action filled super fights of not so super cats",
+      "id": 2
+    },
+    {
+      "title": "Car Race",
+      "description": "There is wonderful car race",
+      "id": 3
+    },
+    {
+      "title": "Lego Build",
+      "description": "Nice Castle Build Using Legos",
+      "userId": "108414201734698698168",
+      "id": 4
+    },
+    {
+      "title": "Programmatic Navigation",
+      "description": "Fun To Create Your Own history",
+      "userId": "108414201734698698168",
+      "id": 5
+    }
+  ]
+}
