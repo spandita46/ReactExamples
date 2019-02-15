@@ -4,7 +4,7 @@ import LangCtx from "../contexts/LanguageContext";
 class Field extends React.Component {
   static contextType = LangCtx;
   render() {
-    const text = this.context === "english" ? "Name" : "नाम";
+    const text = this.context.language === "english" ? "Name" : "नाम";
     return (
       <div className="ui field">
         <label> {text} </label>

@@ -3,8 +3,8 @@ import LangCtx from "../contexts/LanguageContext";
 import ColorCtx from "../contexts/ColourContext";
 
 class Button extends React.Component {
-  renderSubmitText = lang => {
-    return lang === "english" ? "Submit" : "जमा करें";
+  renderSubmitText = language => {
+    return language === "english" ? "Submit" : "जमा करें";
   };
 
   renderButton = color => {
@@ -12,7 +12,7 @@ class Button extends React.Component {
     return (
       <button className={classVal}>
         <LangCtx.Consumer>
-          {value => this.renderSubmitText(value)}
+          {({ language }) => this.renderSubmitText(language)}
         </LangCtx.Consumer>
       </button>
     );
