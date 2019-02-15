@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // import ResourceList from "../resources/ResourceList";
 import ResourceListWithHook from "../resources/ResourceListWithHook";
+import UserList from "../user/UserList";
 
 const App = () => {
   const [resource, setResource] = useState("posts");
@@ -13,6 +14,7 @@ const App = () => {
       </div>
       <div>
         {/* <ResourceList resource={resource} /> */}
+        <UserList />
         <ResourceListWithHook resource={resource} />
       </div>
     </div>

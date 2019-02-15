@@ -1,16 +1,8 @@
-import React, { useState, useEffect } from "react";
-import resourceHelper from "../../helper/resources";
+import React from "react";
+import useResources from "../../helper/useResources";
 
 const ResourceListWithHook = props => {
-  const [resources, setResources] = useState([]);
-
-  useEffect(() => {
-    (async resource => {
-      const response = await resourceHelper.get(`/${resource}`);
-      setResources(response.data);
-    })(props.resource);
-  }, [props.resource]);
-
+  const resources = useResources(props.resource);
   return (
     <ul>
       {resources.map(record => (
