@@ -4,16 +4,20 @@ import resourceHelper from "../../helper/resources";
 const ResourceListWithHook = props => {
   const [resources, setResources] = useState([]);
 
-  const fetchResource = async resource => {
-    const response = await resourceHelper.get(`/${resource}`);
-    setResources(response.data);
-  };
-
   useEffect(() => {
-    fetchResource(props.resource);
+    (async resource => {
+      const response = await resourceHelper.get(`/${resource}`);
+      setResources(response.data);
+    })(props.resource);
   }, [props.resource]);
 
-  return <div>{resources.length}</div>;
+  return (
+    <ul>
+      {resources.map(record => (
+        <li key={record.id}>{record.title}</li>
+      ))}
+    </ul>
+  );
 };
 
 export default ResourceListWithHook;
