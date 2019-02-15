@@ -23,3 +23,11 @@ export class LanguageStore extends React.Component {
 }
 
 export default Context;
+
+// Why Redux?
+// Better Documentation & Support
+
+// Why Context?
+// No Third Party Library
+// Cons:
+// Difficult to maintain different stores and sharing data between these stores will be difficult
